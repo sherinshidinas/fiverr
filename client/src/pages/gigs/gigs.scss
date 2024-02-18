@@ -1,0 +1,119 @@
+.gigs {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 1000px;
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .breadcrumbs {
+      font-weight: 300;
+      font-size: 10px;
+      color: #404145;
+    }
+    h1 {
+      color: #404145;
+    }
+    p {
+      color: #404145;
+      font-weight: 300;
+      font-size: 13px;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .budget {
+          font-size: 12px;
+          font-weight: 300;
+        }
+
+        span {
+        }
+
+        input {
+          padding: 5px;
+          border: 1px solid lightgrey;
+          outline: none;
+
+          &::placeholder {
+            color: grey;
+          }
+        }
+
+        .button {
+          background-color: #1dbf73;
+          color: white;
+          cursor: pointer;
+          border: none;
+          font-weight: 500;
+          padding: 5px 10px;
+          border-radius: 5px;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: relative;
+
+        .SortBy {
+          color: #404145;
+          font-weight: 300;
+          font-size: 11px;
+        }
+
+        .bestSelling {
+          font-weight: 600;
+          font-size: 12px;
+        }
+
+        img {
+          width: 15px;
+          cursor: pointer;
+        }
+
+        .rightMenu {
+          padding: 10px 15px;
+          background-color: white;
+          border-radius: 5px;
+          border: 0.5px solid lightgrey;
+          position: absolute;
+          top: 25px;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          color: #404145;
+          span {
+            font-size: 12px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        
+       
+      
+       
+       
+      
+       
+    }
+  }
+}

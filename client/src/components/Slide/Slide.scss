@@ -1,0 +1,55 @@
+@import "slick-carousel/slick/slick";
+@import "slick-carousel/slick/slick-theme";
+
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0px;
+ 
+
+  .container {
+    width: 1000px;
+   
+    h2{
+        padding-bottom: 24px;
+        color: #404145;
+        line-height: 120%;
+    }
+   
+
+    .slick-prev::before,
+    .slick-next::before {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+
+    .slick-prev::before {
+      content: "\2190"; // Unicode character for left arrow
+      right: 13px; // Adjust the left positioning
+      top: 50%; // Center the arrow vertically
+      transform: translateY(-50%);
+    }
+
+    .slick-next::before {
+      content: "\2192"; // Unicode character for right arrow
+      right: 1; // Adjust the right positioning
+      top: 50%; // Center the arrow vertically
+      transform: translateY(-50%);
+    }
+
+    .slick-arrow,
+    .slick-prev,
+    .slick-next {
+      font-size: 20;
+      color: transparent;
+      background: none;
+    }
+  }
+}

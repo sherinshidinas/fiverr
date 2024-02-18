@@ -1,0 +1,293 @@
+@import "slick-carousel/slick/slick";
+@import "slick-carousel/slick/slick-theme";
+.gig {
+  display: flex;
+  justify-content: center;
+  .container {
+    width: 1000px;
+    padding: 30px 0px;
+    display: flex;
+
+    gap: 50px;
+    .left {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .breadcrumbs {
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 10px;
+        color: #404145;
+      }
+
+      h2 {
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .pp {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        span {
+          font-weight: 500;
+          font-size: 14px;
+        }
+
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 2px;
+
+          img {
+            width: 10px;
+            height: 10px;
+          }
+
+          span {
+            font-size: 10px;
+            font-weight: bold;
+            color: #ffc108;
+          }
+        }
+      }
+
+      .slidee {
+        width: 300px;
+        height: 250px;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+
+      // .slick-prev::before,
+      // .slick-next::before {
+      //   position: absolute;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   color: black;
+      //   width: 30px;
+      //   height: 30px;
+      //   border-radius: 50%;
+      // }
+
+      // .slick-prev::before {
+      //   content: "\2190"; // Unicode character for left arrow
+      //   left: 150px; // Adjust the left positioning
+      //   top: 50%; // Center the arrow vertically
+      //   transform: translateY(-50%);
+      // }
+
+      // .slick-next::before {
+      //   content: "\2192"; // Unicode character for right arrow
+      //   right: 150px; // Adjust the right positioning
+      //   top: 50%; // Center the arrow vertically
+      //   transform: translateY(-50%);
+      // }
+
+      // .slick-arrow,
+      // .slick-prev,
+      // .slick-next {
+      //   font-size: 20;
+      //   color: transparent;
+      //   background: none;
+      // }
+
+      h4 {
+        color: #404145;
+      }
+
+      p {
+        color: #404145;
+        line-height: 25px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      .seller {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h4 {
+          color: #404145;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .pp {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            span {
+              font-weight: 500;
+              font-size: 12px;
+            }
+
+            .stars {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+              img {
+                height: 10px;
+                width: 10px;
+              }
+
+              span {
+                font-size: 10px;
+                font-weight: bold;
+                color: #ffc108;
+              }
+            }
+            button {
+              background-color: #fff;
+              border-radius: 5px;
+              border: 1px solid gray;
+              padding: 5px;
+            }
+          }
+        }
+        .box {
+          border: 1px solid lightgray;
+          border-radius: 2px;
+          padding: 20px;
+          margin-top: 20px;
+
+          .items {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .item {
+              width: 200px;
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+              margin-bottom: 20px;
+              .title {
+                font-size: 12px;
+                color: #404145;
+                font-weight: 500;
+              }
+              .desc {
+                font-size: 12px;
+                font-weight: 600;
+                color: #404145;
+              }
+            }
+          }
+
+          hr {
+            height: 0;
+            margin-bottom: 10px;
+          }
+
+          p {
+            margin-top: 10px;
+            color: #404145;
+            line-height: 25px;
+            font-weight: 500;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      border: 1px solid lightgrey;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: sticky;
+      top: 150px;
+      height: max-content;
+      max-height: 400px;
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h5 {
+          color: #404145;
+        }
+
+        h6 {
+          color: #404145;
+        }
+      }
+      P {
+        color: #404145;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+        margin: 5px 0px;
+      }
+
+      .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 14px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img {
+            width: 12px;
+          }
+          span {
+            font-size: 11px;
+          }
+        }
+      }
+
+      .features {
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          color: #404145;
+          line-height: 25px;
+
+          img {
+            width: 14px;
+          }
+          span {
+            font-size: 13px;
+          }
+        }
+      }
+      button {
+        border: none;
+        background-color: #1dbf73;
+        color: white;
+        font-weight: 500;
+        padding: 10px;
+        border-radius: 2px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.fiverrBusiness {
+  .features {
+    background-color: #0d084d;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    color: white;
+
+    .container {
+      width: 1000px;
+      display: flex;
+      align-items: center;
+      gap: 120px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        &:first-child {
+          flex: 3;
+        }
+
+        &:last-child {
+          flex: 2;
+        }
+
+        .main {
+          display: flex;
+          align-items: flex-end;
+
+          .dot {
+            color: #1dbf73;
+            font-weight: 900;
+            font-size: 20px;
+          }
+
+          .business-solution {
+            font-size: 15px;
+            margin-left: 5px;
+          }
+        }
+
+        h2 {
+          padding-bottom: 24px;
+          color: white;
+          line-height: 120%;
+        }
+
+        .title {
+          display: flex;
+          align-items: center;
+          font-weight: 600;
+          font-size: 14px;
+          gap: 8px;
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        p {
+          font-size: 13px;
+          color: white;
+          font-weight: 500;
+          // letter-spacing: 1px;
+        }
+
+        img {
+          width: 495px;
+          
+        }
+
+        button{
+          width: max-content;
+          padding: 9px 10px;
+          color: #7b7c7d;
+          font-size: 12px;
+          font-weight: 600;
+          background-color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+          
+        }
+      }
+    }
+  }
+}

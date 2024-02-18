@@ -1,0 +1,42 @@
+.reviews {
+  margin-top: 30px;
+  h4 {
+    color: #404145;
+  }
+
+  .add {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .addForm {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      input {
+        padding: 20px;
+        outline: none;
+      }
+
+      select {
+        width: 40px;
+        outline: none;
+        align-self: flex-start;
+        text-align: center;
+      }
+      button {
+        border: none;
+        width: 60px;
+        align-self: self-end;
+        background-color: #1dbf73;
+        color: white;
+        font-weight: 500;
+        padding: 5px;
+        border-radius: 2px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+    }
+  }
+}
