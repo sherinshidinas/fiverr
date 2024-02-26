@@ -5,7 +5,7 @@ import "./gig.scss";
 import Slider from "react-slick";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Reviews from "../../components/reviews/Reviews";
 
 function Gig() {
@@ -28,7 +28,7 @@ function Gig() {
   });
   console.log("data", data);
 
-  const userId = data?.userId
+  const userId = data?.userId;
 
   const {
     isLoading: isLoadingUser,
@@ -41,8 +41,8 @@ function Gig() {
         return res.data;
       }),
 
-      // in this case if there is no userId its not gonna run
-      enabled: !!userId,
+    // in this case if there is no userId its not gonna run
+    enabled: !!userId,
   });
   console.log("data user is ", dataUser);
   return (
@@ -66,7 +66,7 @@ function Gig() {
             ) : (
               <div className="user">
                 <img
-                src="/images/noavatar.jpg"
+                  src="/images/noavatar.jpg"
                   // src={dataUser.img || "/images/noavatar.jpg"}
                   className="pp"
                   alt=""
@@ -105,7 +105,7 @@ function Gig() {
                 <h4>About the seller</h4>
                 <div className="user">
                   <img
-                  src="/images/noavatar.jpg"
+                    src="/images/noavatar.jpg"
                     // src={dataUser.img || "/images/noavatar.jpg"}
                     className="pp"
                     alt=""
@@ -169,9 +169,7 @@ function Gig() {
             )}
 
             {/* reviews comes from seperated file */}
-            <Reviews gigId = {id}/>
-
-
+            <Reviews gigId={id} />
           </div>
           <div className="right">
             <div className="price">
@@ -199,7 +197,9 @@ function Gig() {
                 </div>
               ))}
             </div>
-            <button>Continue</button>
+            <Link to={`/pay/${id}`}>
+              <button>Continue</button>
+            </Link>
           </div>
         </div>
       )}

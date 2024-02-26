@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import "./navbar.scss";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import newRequest from "../../utils/newRequest";
+import "./navbar.scss";
 
 function Navbar() {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
 
   const { pathname } = useLocation();
+
   const navigate = useNavigate();
 
   const isActive = () => {
@@ -53,9 +54,9 @@ function Navbar() {
               <span>{currentUser?.username}</span>
               {open && (
                 <div className="options">
-                  {currentUser?.isSeller && (
+                  {currentUser.isSeller && (
                     <>
-                      <Link to="/gigs" className="link">
+                      <Link to="/myGigs" className="link">
                         Gigs
                       </Link>
                       <Link to="/add" className="link">
@@ -64,12 +65,14 @@ function Navbar() {
                     </>
                   )}
 
-                  <Link to="/messages" className="link">
-                    Messages
-                  </Link>
                   <Link to="/orders" className="link">
                     Orders
                   </Link>
+
+                  <Link to="/messages" className="link">
+                    Messages
+                  </Link>
+
                   <Link className="link" onClick={handleLogout}>
                     Logout
                   </Link>

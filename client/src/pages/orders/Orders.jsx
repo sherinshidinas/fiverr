@@ -2,9 +2,11 @@ import React from "react";
 import "./order.scss";
 import { useQuery } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
+import { useNavigate } from "react-router-dom";
 
 function Orders() {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  const navigate = useNavigate()
   const { isLoading, error, data } = useQuery({
     queryKey: [""],
     queryFn: () =>
@@ -12,7 +14,27 @@ function Orders() {
         return res.data;
       }),
   });
-//hello shidinass
+
+  const handleContact = async (order) => {
+    const sellerId = order.sellerId;
+    const buyerId = order.buyerId;
+    const id = sellerId + buyerId
+ 
+    try {
+      const res = await newRequest.get(`/conversations/single/${id}`)
+      navigate(`/message/${res.data.id}`)
+      
+    } catch (error) {
+      if(error.response.status === 404){
+        const res = await newRequest.post(`/conversations/`, {to:currentUser.seller ? buyerId : sellerId})
+        navigate(`/message/${res.data.id}`)
+      }
+      
+    }
+    
+
+  }
+
   return (
     <div className="orders">
       {isLoading ? (
@@ -43,7 +65,7 @@ function Orders() {
                 <td>{order.price}</td>
 
                 <td>
-                  <img className="message" src="./images/message.png" alt="" />
+                  <img className="message" src="./images/message.png" onClick={()=>handleContact(order)} alt="" />
                 </td>
               </tr>
             ))}

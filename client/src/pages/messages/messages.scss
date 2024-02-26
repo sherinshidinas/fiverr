@@ -10,9 +10,6 @@
     .title {
       display: flex;
       justify-content: space-between;
-
-      h1 {
-      }
     }
 
     table {
@@ -32,8 +29,11 @@
             font-weight: 600;
           }
 
+          // &:nth-child(2),
+          // &:nth-child(3) {
+          //   color: gray;
+          // }
           button {
-           
             border: none;
             padding: 8px;
             color: white;
@@ -42,9 +42,11 @@
             cursor: pointer;
           }
         }
+       
 
         &.active {
           background-color: #98f3c80f;
+          
         }
       }
     }
