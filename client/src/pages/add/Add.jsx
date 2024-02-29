@@ -2,10 +2,9 @@ import React, { useReducer, useState } from "react";
 import "./Add.scss";
 import { INITIAL_STATE, gigReducer } from "../../reducers/gigReducer";
 import { upload } from "../../utils/upload";
-import { useQueryClient,useMutation } from "@tanstack/react-query";
+import { useQueryClient, useMutation } from "@tanstack/react-query";
 import newRequest from "../../utils/newRequest";
 import { useNavigate } from "react-router-dom";
-
 
 function Add() {
   const [singleFile, setSingleFile] = useState(undefined);
@@ -48,26 +47,27 @@ function Add() {
     }
   };
 
-  const navigate  = useNavigate()
+  const navigate = useNavigate();
 
-  const queryCLient = useQueryClient()
+  const queryClient = useQueryClient();
   const mutation = useMutation({
-    mutationFn : (gig) => {
-      return newRequest.post(`/gigs`,gig)
+    mutationFn: (gig) => {
+      return newRequest.post(`/gigs`, gig);
     },
-    onSuccess:() => {
-      queryClient.invalidateQueries(["myGigs"])
-    }
-    
-  })
+    onSuccess: () => {
+      queryClient.invalidateQueries(["myGigs"]);
+      navigate("/myGigs");
+    },
+  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    mutation.mutate(state)
-    navigate("/myGigs")
+    mutation.mutate(state);
+    console.log("state", state);
+ 
   };
 
-  console.log(state);
+  console.log("stateeee", state);
 
   return (
     <div className="add">
@@ -85,10 +85,10 @@ function Add() {
             />
             <label htmlFor="">Category</label>
             <select name="cat" id="cat" onChange={handleChange}>
-              <option value="design">Design</option>
-              <option value="web">Web Development</option>
-              <option value="animation">Animation</option>
-              <option value="music">Music</option>
+              <option value="ai_artists">AI Artists</option>
+              <option value="logo_design">Logo Design</option>
+              <option value="wordpress">Wordpress</option>
+              <option value="voice_over">Voice Over</option>
             </select>
             <div className="images">
               <div className="imagesInputs">

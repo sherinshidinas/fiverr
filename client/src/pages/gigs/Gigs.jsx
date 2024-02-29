@@ -13,6 +13,7 @@ function Gigs() {
   const maxRef = useRef();
 
   const { search } = useLocation();
+  const cat = new URLSearchParams(search).get("cat")
   
 
   const { isLoading, error, data, refetch } = useQuery({
@@ -35,7 +36,7 @@ function Gigs() {
 
   useEffect(() => {
     refetch();
-  }, [sort]);
+  }, [sort,cat]);
 
   const apply = () => {
     refetch();
@@ -45,7 +46,7 @@ function Gigs() {
     <div className="gigs">
       <div className="container">
         <span className="breadcrumbs">FIVERR / GRAPHICS & DESIGN/</span>
-        <h1>AI Artists</h1>
+        <h1>{cat.toLocaleUpperCase().replace("_"," ")}</h1>
         <p>
           Explore the boundaries of art and technology with Fiverr's AI Artists
         </p>

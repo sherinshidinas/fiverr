@@ -32,7 +32,7 @@ function GitCard({ item }) {
               <span>{data.username}</span>
             </div>
           )}
-          <p>{item.desc}</p>
+          <p>{item?.desc?.substring(0,40)}...</p>
 
           <div className="star">
             <img src="/images/star.png" alt="" />

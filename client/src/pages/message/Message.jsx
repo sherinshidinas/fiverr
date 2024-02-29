@@ -18,8 +18,7 @@ function Message() {
       }),
   });
 
-  
-
+  console.log("currentUser", currentUser);
   const mutation = useMutation({
     mutationFn: (message) => {
       return newRequest.post(`/messages`, message);
@@ -47,7 +46,7 @@ function Message() {
           <Link to="/messages" className="link">
             MESSAGES
           </Link>{" "}
-          > SHERIN SHIDINAS >
+          &gt; {currentUser.username.toUpperCase()} &gt;
         </span>
 
         {isLoading ? (
@@ -63,7 +62,14 @@ function Message() {
                 }
                 key={message._id}
               >
-                <img src={currentUser.img || "/images/noavatar.jpg"} alt="" />
+                <img
+                  src={
+                    message.userId === currentUser._id
+                      ? currentUser.img
+                      : "/images/noavatar.jpg"
+                  }
+                  alt=""
+                />
                 <p>{message.desc}</p>
               </div>
             ))}

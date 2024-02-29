@@ -7,7 +7,7 @@ export const createGig = async (req, res, next) => {
     return next(createError(403, "Only sellers can create a gig!"));
 
   const newGig = new Gig({
-    userId: req.userId,
+    userId: req.currentUser,
     ...req.body,
   });
 

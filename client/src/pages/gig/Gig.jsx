@@ -28,6 +28,7 @@ function Gig() {
   });
   console.log("data", data);
 
+
   const userId = data?.userId;
 
   const {
@@ -85,7 +86,7 @@ function Gig() {
                 )}
               </div>
             )}
-            <img className="slidee" src={data.image} alt="" />
+            <img className="slidee" src={data.cover}  alt="" />
             {/* <Slider {...settings} className="slide">
               {data.images.map((img)=>(
                  <img src={img} key={img} alt="" />
