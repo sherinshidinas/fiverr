@@ -18,7 +18,7 @@ function MyGigs() {
       }),
   });
 
-  console.log("entha kaaninkkathe",data)
+  console.log("entha kaaninkkathee",data)
 
   const mutation = useMutation({
     mutationFn: (id) => {
