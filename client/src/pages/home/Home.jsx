@@ -3,8 +3,8 @@ import "./home.scss";
 import Featured from "../../components/featured/Featured";
 import TrustedBy from "../../components/trustedBy/TrustedBy";
 import Slide from "../../components/Slide/Slide";
-import { cards } from "../../Data";
-import { projects } from "../../Data";
+import { cards } from "../../data";
+import { projects } from "../../data";
 import CatCard from "../../components/catCard/CatCard";
 import BestPart from "../../components/bestPart/BestPart";
 import FiverBusiness from "../../components/fiverBusiness/FiverBusiness";
@@ -28,20 +28,14 @@ function Home() {
           <CatCard item={card} key={card.id} />
         ))}
       </Slide>
-      <BestPart/>
-      <FiverBusiness/>
+      <BestPart />
+      <FiverBusiness />
 
       <Slide settings={settings}>
         {projects.map((project) => (
           <ProjectCard item={project} key={project.id} />
         ))}
-      </Slide>  
-
-      
-
-     
-
-      
+      </Slide>
     </div>
   );
 }
