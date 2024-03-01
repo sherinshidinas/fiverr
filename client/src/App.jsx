@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 import Home from "./pages/home/Home";
 import Gigs from "./pages/gigs/Gigs";
-import MyGigs from "./pages/MyGigs/MyGigs";
+import MyGigs from "./pages/myGigs/MyGigs";
 import Orders from "./pages/orders/Orders";
 import Messages from "./pages/messages/Messages";
 import Message from "./pages/message/Message";
