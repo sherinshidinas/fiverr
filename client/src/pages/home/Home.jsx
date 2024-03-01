@@ -9,6 +9,7 @@ import CatCard from "../../components/catCard/CatCard";
 import BestPart from "../../components/bestPart/BestPart";
 import FiverBusiness from "../../components/fiverBusiness/FiverBusiness";
 import ProjectCard from "../../components/projectCard/ProjectCard";
+//hello
 
 function Home() {
   const settings = {
