@@ -27,6 +27,7 @@ function Gigs() {
           return res.data;
         }),
   });
+ 
   console.log("from data", data);
 
   const reSort = (type) => {
@@ -46,7 +47,9 @@ function Gigs() {
     <div className="gigs">
       <div className="container">
         <span className="breadcrumbs">FIVERR / GRAPHICS & DESIGN/</span>
-        <h1>{cat.toLocaleUpperCase().replace("_"," ")}</h1>
+        
+        <h1>{cat ? cat.toLocaleUpperCase().replace("_"," ") : ""}</h1>
+
         <p>
           Explore the boundaries of art and technology with Fiverr's AI Artists
         </p>

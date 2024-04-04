@@ -2,16 +2,19 @@ import React, { useState } from "react";
 
 import "./login.scss";
 import newRequest from "../../utils/newRequest";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
-  const navigate = useNavigate()
-  
+  const navigate = useNavigate();
 
+  const handlePasswordToggle = () => {
+    setShowPassword(!showPassword);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -21,8 +24,7 @@ function Login() {
         password,
       });
       localStorage.setItem("currentUser", JSON.stringify(res.data));
-      navigate("/")
-      
+      navigate("/");
     } catch (error) {
       setError(error.response.data);
     }
@@ -40,12 +42,20 @@ function Login() {
         />
 
         <label htmlFor="">Password</label>
-        <input
-          type="password"
-          name="password"
-          placeholder="enter you password"
-          onChange={(e) => setPassword(e.target.value)}
-        />
+
+        <div className="passwordContainer">
+          <input
+            type={showPassword ? "text" : "password"}
+            name="password"
+            className="passwordInput"
+            placeholder="enter you password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <div className="showPassword" onClick={handlePasswordToggle}>
+            {showPassword ? "hide" : "show"}
+          </div>
+        </div>
 
         <button type="submit">Login</button>
         {error && error}
