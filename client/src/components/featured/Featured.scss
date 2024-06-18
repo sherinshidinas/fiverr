@@ -6,7 +6,8 @@
   color: white;
 
   .container {
-    width: 1000px;
+    width: 80%;
+    max-width: 1000px;
     display: flex;
     align-items: center;
 
@@ -15,13 +16,12 @@
       flex-direction: column;
       gap: 20px;
       min-width: 400px;
-     
 
       h1 {
         font-size: 20px;
 
-        i{
-            font-weight: 300;
+        i {
+          font-weight: 300;
         }
       }
 
@@ -38,7 +38,7 @@
 
           img {
             width: 15px;
-            height: 15px;    
+            height: 15px;
             margin: 8px;
           }
           input {
@@ -49,12 +49,12 @@
         }
 
         .searchIcon {
-            width: 50px;
-            height: 32px;
-            color: white;
-            cursor: pointer;
-            border: none;
-            background-color:#1dbf73;
+          width: 50px;
+          height: 32px;
+          color: white;
+          cursor: pointer;
+          border: none;
+          background-color: #1dbf73;
         }
       }
 
@@ -65,40 +65,193 @@
         font-size: 12px;
         font-weight: 600;
         span {
-           
         }
 
         button {
-            font-size: 10px;
-            border: none;
-            border-radius: 20px;
-            padding: 5px;
-            background-color: transparent;
-            color: white;
-            border: 1px solid white;
-            cursor: pointer;
+          font-size: 10px;
+          border: none;
+          border-radius: 20px;
+          padding: 5px;
+          background-color: transparent;
+          color: white;
+          border: 1px solid white;
+          cursor: pointer;
         }
 
-        button:hover{
-            background-color: white;
-            color:#013914
+        button:hover {
+          background-color: white;
+          color: #013914;
         }
       }
     }
 
     .right {
-       height: 100%;
+      height: 100%;
       img {
         height: 100%;
         margin-left: 110px;
         object-fit: contain;
-        
-
       }
     }
   }
 }
 
+// Media Queries
 
-  
-  
+@media (max-width: 1024px) {
+  .featured {
+    height: auto;
+    .container {
+      width: 80%; // Adjust width for tablets and small laptops
+    }
+
+    .left {
+      min-width: 300px;
+
+      .search {
+        flex-direction: row;
+        align-items: flex-start;
+      }
+    }
+
+    .right {
+      img {
+        margin-left: 0;
+        width: 100%; // Adjust image width
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .featured {
+    height: auto; // Adjust height for tablets
+    padding: 20px 0;
+  }
+
+  .container {
+    flex-direction: column; // Stack elements vertically
+    align-items: center;
+  }
+
+  .left {
+    width: 100%;
+    align-items: center;
+    text-align: center; // Center align text for better readability
+
+    h1 {
+      font-size: 18px;
+    }
+
+    .search {
+      width: 50%;
+
+      .searchIcon {
+        width: 100%;
+      }
+    }
+
+    .popular {
+      justify-content: center;
+    }
+  }
+
+  .right {
+    img {
+      width: 80%; // Adjust image size
+      display: none;
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .left {
+    h1 {
+      font-size: 14px;
+      width: 90%;
+    }
+
+    .popular {
+      flex-wrap: wrap; // Allow wrapping for small buttons
+      gap: 5px;
+      width: 80%;
+    }
+
+    .search {
+      .searchIcon {
+        width: 100%;
+        // margin-top: 5px; // Adjust margin for small screens
+        padding: 5px;
+      }
+    }
+  }
+
+  .right {
+    img {
+      display: none;
+      width: 100%; // Full width on very small screens
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .featured {
+    padding: 10px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    width: 90%; // Full width for very small screens
+  }
+
+  .left {
+    h1 {
+      font-size: 12px;
+      width: 80%;
+    }
+
+    .search {
+      margin-right: 70px;
+      // flex-direction: row; // Stack search elements vertically
+      // align-items: stretch;
+
+      .searchInput {
+        width: 100%;
+        font-size: 4px;
+
+        img {
+          margin: 5px;
+        }
+      }
+
+      .searchIcon {
+        width: 90%;
+        height: 40px; // Adjust button height
+        // margin-top: 5px; // Adjust margin
+        padding: 5px;
+        // border-radius: 10px;
+      }
+    }
+
+    .popular {
+      flex-direction: column; // Stack popular buttons
+      align-items: center;
+      gap: 5px;
+      width: 50%;
+
+      button {
+        width: 100%; // Full width buttons
+        font-size: 12px;
+      }
+    }
+  }
+
+  .right {
+    img {
+      width: 100%;
+      height: auto; // Adjust image size
+    }
+  }
+}

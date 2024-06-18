@@ -102,18 +102,194 @@
       }
     }
 
-    .cards{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+  }
+
+  //media queries
+
+  @media (max-width: 1200px) {
+    .container {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
         gap: 20px;
-        
-       
-      
-       
-       
-      
-       
+
+        .left,
+        .right {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .right {
+          justify-content: flex-end;
+        }
+      }
+
+      .cards {
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 20px;
+      .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        .left,
+        .right {
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .right {
+          justify-content: flex-end;
+        }
+      }
+
+      .cards {
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .container {
+      .breadcrumbs {
+        font-size: 8px;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+
+      .menu {
+        .left {
+          .budget {
+            font-size: 10px;
+          }
+
+          input {
+            padding: 3px;
+            font-size: 10px;
+          }
+
+          .button {
+            padding: 3px 5px;
+            font-size: 10px;
+          }
+        }
+
+        .right {
+          .SortBy {
+            font-size: 9px;
+          }
+
+          .bestSelling {
+            font-size: 10px;
+          }
+
+          img {
+            width: 12px;
+          }
+
+          .rightMenu {
+            padding: 8px 10px;
+
+            span {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .cards {
+        gap: 5px;
+      }
+    }
+  }
+
+
+  @media (max-width: 375px) {
+    .container {
+      padding: 15px;
+
+      .breadcrumbs {
+        font-size: 7px;
+      }
+
+      h1 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+
+      .menu {
+        .left {
+          .budget {
+            font-size: 9px;
+          }
+
+          input {
+            padding: 2px;
+            font-size: 9px;
+          }
+
+          .button {
+            padding: 2px 4px;
+            font-size: 9px;
+          }
+        }
+
+        .right {
+          .SortBy {
+            font-size: 8px;
+          }
+
+          .bestSelling {
+            font-size: 9px;
+          }
+
+          img {
+            width: 10px;
+          }
+
+          .rightMenu {
+            padding: 6px 8px;
+
+            span {
+              font-size: 9px;
+            }
+          }
+        }
+      }
+
+      .cards {
+        gap: 3px;
+      }
     }
   }
 }

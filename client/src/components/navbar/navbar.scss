@@ -9,20 +9,19 @@
   transition: 0.5s all ease;
   z-index: 999;
 
-  // color: black
-
   &.active {
     background-color: white;
     color: black;
 
-    button{
+    button {
       background-color: white !important;
       color: #1dbf73 !important;
       border: 1px solid #1dbf73 !important;
     }
   }
   .container {
-    width: 1000px;
+    width: 80%;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     padding: 13px 0px;
@@ -72,7 +71,7 @@
           width: 30px;
           height: 30px;
           border-radius: 50%;
-          object-fit:cover;
+          object-fit: cover;
         }
 
         .options {
@@ -99,23 +98,144 @@
     border: 0.5px solid rgb(243, 243, 243);
   }
   .menu {
-    width: 900px;
+    width: 80%;
     padding: 10px 0px;
     display: flex;
     justify-content: space-between;
     font-weight: 300;
     color: grey;
 
-    .menuLinks{
-        font-size: 10px;
-        
+    .menuLinks {
+      font-size: 10px;
+    }
+  }
+
+  // Media Queries
+
+  @media (max-width: 1024px) {
+    .container {
+      width: 80%;
+      gap: 20;
+    }
+
+    .links {
+      gap: 20px;
+      font-size: 13px;
+
+      .user .options {
+        width: 80px;
+      }
+    }
+
+    .menu {
+      width: 80%;
+
+      .menuLinks {
+        font-size: 9px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: 80%;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 22px;
+    }
+
+    .links {
+      gap: 15px;
+
+      button {
+        padding: 8px 16px;
+      }
+    }
+
+    .menu {
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .menuLinks {
+        font-size: 7px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      width: 80%;
+      padding: 10px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .links {
+      gap: 10px;
+      font-size: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+
+      button {
+        padding: 8px 12px;
+      }
+    }
+
+    .menu {
+      width: 100%;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .menuLinks {
+        font-size: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .container {
+      width: 80%;
+      padding: 5px;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .links {
+      gap: 8px;
+      font-size: 11px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: center;
+
+      button {
+        padding: 6px 10px;
+      }
+    }
+
+    .menu {
+      width: 100%;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .menuLinks {
+        font-size: 6px;
+      }
     }
   }
 }
-
-
-
-
-
-
-

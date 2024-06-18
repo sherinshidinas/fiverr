@@ -88,4 +88,164 @@
       }
     }
   }
+
+
+//media queries
+
+@media (max-width: 1024px) {
+  .features .container {
+    width: 90%;
+    gap: 60px;
+
+    .item {
+      h2 {
+        font-size: 22px;
+      }
+
+      .title {
+        font-size: 12px;
+
+        img {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      img {
+        width: 450px;
+      }
+
+      button {
+        font-size: 11px;
+        padding: 8px 9px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .features .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+
+    .item {
+      h2 {
+        font-size: 20px;
+      }
+
+      .title {
+        font-size: 11px;
+
+        img {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      p {
+        font-size: 11px;
+      }
+
+      img {
+        width: 400px;
+      }
+
+      button {
+        font-size: 10px;
+        padding: 7px 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .features .container {
+    width: 80%;
+    gap: 20px;
+
+    .item {
+      h2 {
+        font-size: 18px;
+      }
+
+      .title {
+        font-size: 10px;
+
+        img {
+          width: 10px;
+          height: 10px;
+        }
+      }
+
+      p {
+        font-size: 10px;
+      }
+
+      img {
+        width: 350px;
+      }
+
+      button {
+        font-size: 9px;
+        padding: 6px 7px;
+      }
+    }
+
+    .item{
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .features .container {
+    padding: 20px;
+
+    .item {
+      h2 {
+        font-size: 16px;
+      }
+
+      .title {
+        font-size: 9px;
+
+        img {
+          width: 8px;
+          height: 8px;
+        }
+      }
+
+      p {
+        font-size: 9px;
+      }
+
+      img {
+        width: 300px;
+      }
+
+      button {
+        font-size: 8px;
+        padding: 5px 6px;
+      }
+    }
+
+    .item{
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+
 }

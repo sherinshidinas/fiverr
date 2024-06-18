@@ -70,4 +70,210 @@
       height: 10px;
     }
   }
+
+  //media query
+
+  @media (max-width: 1024px) {
+    .user {
+      .pp {
+        height: 30px;
+        width: 30px;
+      }
+
+      .info {
+        span {
+          font-size: 11px;
+        }
+
+        .country {
+          img {
+            width: 10px;
+          }
+
+          span {
+            font-size: 9px;
+          }
+        }
+
+        .stars {
+          img {
+            height: 6px;
+            width: 6px;
+          }
+
+          span {
+            font-size: 7px;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 13px;
+    }
+
+    .helpful {
+      span {
+        font-size: 9px;
+      }
+
+      img {
+        width: 9px;
+        height: 9px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .user {
+      .pp {
+        height: 26px;
+        width: 26px;
+      }
+
+      .info {
+        span {
+          font-size: 10px;
+        }
+
+        .country {
+          img {
+            width: 8px;
+          }
+
+          span {
+            font-size: 8px;
+          }
+        }
+
+        .stars {
+          img {
+            height: 5px;
+            width: 5px;
+          }
+
+          span {
+            font-size: 6px;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    .helpful {
+      span {
+        font-size: 8px;
+      }
+
+      img {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .user {
+      .pp {
+        height: 22px;
+        width: 22px;
+      }
+
+      .info {
+        span {
+          font-size: 9px;
+        }
+
+        .country {
+          img {
+            width: 6px;
+          }
+
+          span {
+            font-size: 7px;
+          }
+        }
+
+        .stars {
+          img {
+            height: 4px;
+            width: 4px;
+          }
+
+          span {
+            font-size: 5px;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 11px;
+    }
+
+    .helpful {
+      span {
+        font-size: 7px;
+      }
+
+      img {
+        width: 7px;
+        height: 7px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .user {
+      .pp {
+        height: 20px;
+        width: 20px;
+      }
+
+      .info {
+        span {
+          font-size: 8px;
+        }
+
+        .country {
+          img {
+            width: 5px;
+          }
+
+          span {
+            font-size: 6px;
+          }
+        }
+
+        .stars {
+          img {
+            height: 3px;
+            width: 3px;
+          }
+
+          span {
+            font-size: 4px;
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    .helpful {
+      span {
+        font-size: 6px;
+      }
+
+      img {
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
 }

@@ -67,8 +67,6 @@
           }
         }
 
-        
-
         button {
           border: none;
           padding: 10px;
@@ -79,44 +77,200 @@
           font-weight: 500;
         }
 
-        .addFeatures{
-            display: flex;
-            justify-content: space-between;
+        .addFeatures {
+          display: flex;
+          justify-content: space-between;
 
-            input{
-                width: 89%;
-            }
+          input {
+            width: 89%;
+          }
 
-
-            .uploadButton {
-                border: none;
-                padding: 5px;
-                background-color: #1dbf73;
-                color: white;
-                cursor: pointer;
-                font-size: 10px;
-                font-weight: 500;
-                border-radius: 2px;
-              }
+          .uploadButton {
+            border: none;
+            padding: 5px;
+            background-color: #1dbf73;
+            color: white;
+            cursor: pointer;
+            font-size: 10px;
+            font-weight: 500;
+            border-radius: 2px;
+          }
         }
 
-        .addedFeatures{
-            display: flex;
-            gap:10px;
+        .addedFeatures {
+          display: flex;
+          gap: 10px;
 
-            button{
-               
-                font-size: 10px;
-                font-weight: 500;
-                border-radius: 2px;
-                padding: 5px;
-                background: transparent;
-                color: red;
-                border: 1px solid red;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
+          button {
+            font-size: 10px;
+            font-weight: 500;
+            border-radius: 2px;
+            padding: 5px;
+            background: transparent;
+            color: red;
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  //media queries
+
+  @media (max-width: 1024px) {
+    .container {
+      width: 90%;
+      padding: 30px 0px;
+
+      .sections {
+        gap: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: 80%;
+      padding: 20px 0px;
+
+      .sections {
+        gap: 30px;
+
+        .left,
+        .right {
+          gap: 10px;
+
+          label {
+            font-size: 13px;
+            padding: 3px;
+          }
+
+          input,
+          select,
+          textarea {
+            font-size: 11px;
+            padding: 4px;
+          }
+
+          .images .uploadButton,
+          button {
+            font-size: 12px;
+            padding: 8px;
+          }
+
+          .addFeatures input {
+            width: 85%;
+          }
+
+          .addFeatures .uploadButton {
+            font-size: 9px;
+            padding: 4px;
+          }
+
+          .addedFeatures button {
+            font-size: 9px;
+            padding: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      width: 90%;
+      padding: 20px 0px;
+
+      .sections {
+        gap: 20px;
+
+        .left,
+        .right {
+          gap: 10px;
+
+          label {
+            font-size: 12px;
+            padding: 3px;
+          }
+
+          input,
+          select,
+          textarea {
+            font-size: 10px;
+            padding: 3px;
+          }
+
+          .images .uploadButton,
+          button {
+            font-size: 11px;
+            padding: 6px;
+          }
+
+          .addFeatures input {
+            width: 80%;
+          }
+
+          .addFeatures .uploadButton {
+            font-size: 8px;
+            padding: 3px;
+          }
+
+          .addedFeatures button {
+            font-size: 8px;
+            padding: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .container {
+      width: 95%;
+
+      padding: 15px 0px;
+
+      .sections {
+        gap: 15px;
+
+        .left,
+        .right {
+          gap: 8px;
+
+          label {
+            font-size: 11px;
+            padding: 2px;
+          }
+
+          input,
+          select,
+          textarea {
+            font-size: 9px;
+            padding: 2px;
+          }
+
+          .images .uploadButton,
+          button {
+            font-size: 10px;
+            padding: 5px;
+          }
+
+          .addFeatures input {
+            width: 75%;
+          }
+
+          .addFeatures .uploadButton {
+            font-size: 7px;
+            padding: 2px;
+          }
+
+          .addedFeatures button {
+            font-size: 7px;
+            padding: 2px;
+          }
         }
       }
     }

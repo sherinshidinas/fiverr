@@ -291,4 +291,311 @@
       }
     }
   }
+
+  //media queries
+
+  @media (max-width: 1024px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      gap: 20px;
+
+      .left,
+      .right {
+        width: 100%;
+      }
+
+      .right {
+        position: static;
+        max-height: none;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+      
+      padding: 20px;
+
+      .left {
+        .user {
+          .pp {
+            width: 24px;
+            height: 24px;
+          }
+
+          span {
+            font-size: 12px;
+          }
+
+          .stars {
+            img {
+              width: 8px;
+              height: 8px;
+            }
+
+            span {
+              font-size: 8px;
+            }
+          }
+        }
+
+        .slide {
+          height: 200px;
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .seller {
+          .user {
+            .pp {
+              width: 60px;
+              height: 60px;
+            }
+
+            .info {
+              span {
+                font-size: 10px;
+              }
+
+              .stars {
+                img {
+                  width: 8px;
+                  height: 8px;
+                }
+
+                span {
+                  font-size: 8px;
+                }
+              }
+
+              button {
+                padding: 4px;
+                font-size: 10px;
+              }
+            }
+          }
+
+          .box {
+            padding: 15px;
+
+            .items {
+              .item {
+                width: 150px;
+
+                .title,
+                .desc {
+                  font-size: 10px;
+                }
+              }
+            }
+
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .right {
+        padding: 10px;
+
+        .price {
+          h5,
+          h6 {
+            font-size: 14px;
+          }
+        }
+
+        p {
+          font-size: 12px;
+        }
+
+        .details {
+          .item {
+            img {
+              width: 10px;
+            }
+
+            span {
+              font-size: 10px;
+            }
+          }
+        }
+
+        .features{
+          .item{
+            img{
+              width: 12px;
+            }
+
+            span{
+              font-size: 12px;
+            }
+          }
+        }
+
+        button{
+          padding: 8px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 480px) {
+    .container {
+      width: 80%;
+      padding: 15px;
+
+      .left {
+        .breadcrumbs {
+          font-size: 8px;
+        }
+
+        h2 {
+          font-size: 18px;
+        }
+
+        .user {
+          gap: 5px;
+
+          .pp {
+            width: 20px;
+            height: 20px;
+          }
+
+          span {
+            font-size: 10px;
+          }
+
+          .stars {
+            img {
+              width: 6px;
+              height: 6px;
+            }
+
+            span {
+              font-size: 6px;
+            }
+          }
+        }
+
+        .slidee {
+          height: 150px;
+        }
+
+        h4 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 10px;
+        }
+
+        .seller {
+          .user {
+            gap: 10px;
+
+            .pp {
+              width: 50px;
+              height: 50px;
+            }
+
+            .info {
+              gap: 3px;
+
+              span {
+                font-size: 8px;
+              }
+
+              .stars {
+                img {
+                  height: 6px;
+                  width: 6px;
+                }
+
+                span {
+                  font-size: 6px;
+                }
+              }
+
+              button {
+                padding: 3px;
+                font-size: 8px;
+              }
+            }
+          }
+
+          .box {
+            padding: 10px;
+
+            .items {
+              .item {
+                width: 120px;
+
+                .title,
+                .desc {
+                  font-size: 8px;
+                }
+              }
+            }
+
+            p {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+
+      .right {
+        padding: 8px;
+
+        .price {
+          h5,
+          h6 {
+            font-size: 12px;
+          }
+        }
+
+        p {
+          font-size: 10px;
+        }
+
+        .details {
+          .item {
+            img {
+              width: 8px;
+            }
+
+            span {
+              font-size: 8px;
+            }
+          }
+        }
+
+        .features {
+          .item {
+            img {
+              width: 10px;
+            }
+
+            span {
+              font-size: 10px;
+            }
+          }
+        }
+
+        button {
+          padding: 6px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
 }

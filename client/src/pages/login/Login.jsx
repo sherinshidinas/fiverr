@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./login.scss";
 import newRequest from "../../utils/newRequest";
 import { useNavigate } from "react-router-dom";
@@ -53,7 +52,7 @@ function Login() {
           />
 
           <div className="showPassword" onClick={handlePasswordToggle}>
-            {showPassword ? "hide" : "show"}
+            {showPassword ? <img src="./images/hide.png" className="eye" alt="" /> : <img src="./images/view.png" className="eye" alt="" /> }
           </div>
         </div>
 

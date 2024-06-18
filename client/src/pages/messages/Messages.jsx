@@ -40,7 +40,7 @@ function Messages() {
       ) : (
         <div className="container">
           <div className="title">
-            <h3>Orders</h3>
+            <h3>Messages</h3>
           </div>
 
           <table>
