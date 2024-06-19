@@ -17,7 +17,6 @@ function Register() {
   });
 
   const navigate = useNavigate();
-  
 
   const handleChange = (e) => {
     setUser((prev) => {
